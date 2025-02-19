@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Contato - Curso HTML e CSS</title>
-    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/style.css"> <!-- Importação do arquivo CSS para estilização -->
 </head>
 <body>
     <header>
@@ -12,18 +12,19 @@
             <ul>
                 <li><a href="../index.html">Início</a></li>
                 <li><a href="sobre.html">Sobre</a></li>
-                <li><a href="contato.html">Contato</a></li>
+                <li><a href="contato.html">Contato</a></li> <!-- Menu de navegação -->
             </ul>
         </nav>
         <div class="dark-mode-toggle">
             <label for="darkModeToggle">Modo Escuro</label>
-            <input type="checkbox" id="darkModeToggle">
+            <input type="checkbox" id="darkModeToggle"> <!-- Checkbox para alternar entre modo claro e escuro -->
         </div>
     </header>
 
     <main>
         <div class="visit-counter">
-            Número de visitas: <span id="visitCount">0</span>
+            Número de visitas: <span id="visitCount">0</span> 
+            <!-- Span que será atualizado dinamicamente pelo JavaScript -->
         </div>
 
         <h1>Entre em Contato</h1>
@@ -33,15 +34,15 @@
                 <div class="contato-detalhes">
                     <div class="contato-item">
                         <h3>Email</h3>
-                        <p>curso@exemplo.com</p>
+                        <p>curso@exemplo.com</p> <!-- Exibição do e-mail de contato -->
                     </div>
                     <div class="contato-item">
                         <h3>Telefone</h3>
-                        <p>(11) 99999-9999</p>
+                        <p>(11) 99999-9999</p> <!-- Pode-se adicionar um link `tel:` para facilitar a chamada no celular -->
                     </div>
                     <div class="contato-item">
                         <h3>Horário de Atendimento</h3>
-                        <p>Segunda a Sexta: 9h às 18h</p>
+                        <p>Segunda a Sexta: 9h às 18h</p> <!-- Informação sobre horário de funcionamento -->
                     </div>
                 </div>
             </div>
@@ -51,22 +52,28 @@
                 <form class="formulario">
                     <div class="form-grupo">
                         <label for="nome">Nome Completo:</label>
-                        <input type="text" id="nome" name="nome" required>
+                        <input type="text" id="nome" name="nome" required placeholder="Digite seu nome">
+                        <!-- Campo de entrada de texto para o nome -->
                     </div>
                     
                     <div class="form-grupo">
                         <label for="email">Email:</label>
-                        <input type="email" id="email" name="email" required>
+                        <input type="email" id="email" name="email" required placeholder="seuemail@exemplo.com">
+                        <!-- Campo de entrada para e-mail com validação automática de formato -->
                     </div>
 
                     <div class="form-grupo">
                         <label for="telefone">Telefone:</label>
-                        <input type="tel" id="telefone" name="telefone" required>
+                        <input type="tel" id="telefone" name="telefone" required 
+                               pattern="\(\d{2}\) \d{5}-\d{4}" 
+                               placeholder="(11) 99999-9999">
+                        <!-- Campo de telefone com um padrão de formato para validação -->
                     </div>
                     
                     <div class="form-grupo">
                         <label for="mensagem">Por que você quer fazer o curso?</label>
-                        <textarea id="mensagem" name="mensagem" required></textarea>
+                        <textarea id="mensagem" name="mensagem" required maxlength="500" placeholder="Escreva sua motivação"></textarea>
+                        <!-- Área de texto para mensagem com limite de caracteres -->
                     </div>
 
                     <div class="form-grupo">
@@ -74,18 +81,22 @@
                             <input type="checkbox" name="newsletter" id="newsletter">
                             Desejo receber novidades sobre próximos cursos
                         </label>
+                        <!-- Checkbox opcional para inscrição em newsletter -->
                     </div>
                     
-                    <button type="submit">Enviar Inscrição</button>
+                    <button type="submit">Enviar Inscrição</button> 
+                    <!-- Botão para enviar o formulário -->
                 </form>
             </div>
         </section>
     </main>
 
     <footer>
-        <p>&copy; 2024 Curso HTML e CSS</p>
+        <p>&copy; 2024 Curso HTML e CSS</p> 
+        <!-- Rodapé com direitos autorais -->
     </footer>
 
-    <script src="../js/main.js"></script>
+    <script src="../js/main.js"></script> 
+    <!-- Importação do script JavaScript externo -->
 </body>
 </html>
